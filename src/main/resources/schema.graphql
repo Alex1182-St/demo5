@@ -1,0 +1,21 @@
+Schema {
+    query: Query
+    mutation: Mutation
+}
+
+type User {
+    id: ID!,
+    userName: String!,
+    userSurname: String!,
+    age: int,
+    email: String
+}
+
+type Mutation {
+    createUser(userName: String!, userSurname: String!, age: int, email: String): User!
+    deleteUser(id: ID!):
+}
+
+type Query {
+    clientById(id:ID!): Client!
+}
