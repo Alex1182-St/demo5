@@ -17,9 +17,10 @@ repositories {
 }
 
 dependencies {
+
+	implementation("org.springframework.boot:spring-boot-devtools") // Для імпорту ресолверів (GraphQLQueryResolver і ін.)
 	implementation("com.graphql-java-kickstart:graphql-spring-boot-starter:6.0.1")
 	testImplementation("com.graphql-java-kickstart:graphql-spring-boot-starter-test:6.0.1")
-
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-web")
