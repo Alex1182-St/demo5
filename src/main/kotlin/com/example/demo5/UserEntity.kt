@@ -14,12 +14,12 @@ data class UserEntity (
         @Column(updatable = false, nullable = false)
         val id: UUID? = null,
 
-        val userName: String = "defaultUserName",
+        var userName: String = "defaultUserName",
 
-        val userSurname: String = "defaultUserSurname",
+        var userSurname: String = "defaultUserSurname",
 
-        val age: Int? = null,
+        var age: Int? = null,
 
-        val email: String? = null
+        var email: String? = null
 
         )
