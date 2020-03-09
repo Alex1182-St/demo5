@@ -5,8 +5,10 @@ import org.springframework.stereotype.Component
 
 
 @Component
-class UserMutationResolver : GraphQLQueryResolver{
+class UserMutationResolver (val userServ: UserService) : GraphQLQueryResolver{
 
-
+fun createUser (userName: String, userSurname: String, age: Int?, email: String?): UserEntity {
+    return userServ.createUser(userName,userSurname,age,email)
+}
 
 }
