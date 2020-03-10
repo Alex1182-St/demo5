@@ -9,17 +9,15 @@ import java.util.*
 class UserService (val userRepo: UserRepository) {
 
 @Transactional
-fun createUser (userName: String, userSurname: String, age: Int?, email: String?): UserEntity {
-    val user = UserEntity ()
-    user.userName = userName
-    user.userSurname = userSurname
-    user.age = age
-    user.email = email
+fun createUser (userNameNew: String, userSurnameNew: String, ageNew: Int?, emailNew: String?): UserEntity {
+
+    val user = UserEntity(userName = userNameNew, userSurname = userSurnameNew, age = ageNew, email = emailNew)
     return userRepo.save(user)
 }
+
 @Transactional
-    fun deleteUser (id: UUID) {
-    return userRepo.deleteById(id)
+    fun deleteUser (idNew: UUID) {
+    return userRepo.deleteById(idNew)
 }
 
 }
