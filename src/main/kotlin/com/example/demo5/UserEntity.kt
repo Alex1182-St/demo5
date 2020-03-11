@@ -21,5 +21,4 @@ data class UserEntity (
         val age: Int? = null,
 
         val email: String? = null
-
         )
