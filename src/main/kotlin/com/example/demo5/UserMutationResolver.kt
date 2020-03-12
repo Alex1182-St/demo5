@@ -8,6 +8,8 @@ import java.util.*
 @Component
 class UserMutationResolver (val userServ: UserService) : GraphQLQueryResolver{
 
+
+
 fun createUser (userNameNew: String, userSurnameNew: String, ageNew: Int?, emailNew: String?): UserEntity {
     return userServ.createUser(userNameNew,userSurnameNew,ageNew,emailNew)
 }

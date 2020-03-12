@@ -1,21 +1,16 @@
-Schema {
-    query: Query
-    mutation: Mutation
+type Query {
+    userById(id:ID!): User!
 }
 
 type User {
     id: ID!,
     userName: String!,
     userSurname: String!,
-    age: int,
+    age: Int,
     email: String
 }
 
 type Mutation {
-    createUser(userName: String!, userSurname: String!, age: int, email: String): User!
-    deleteUser(id: ID!):
-}
-
-type Query {
-    clientById(id:ID!): Client!
+    createUser(userName: String!, userSurname: String!, age: Int, email: String): User!
+    deleteUser(id: ID!): Boolean
 }
